@@ -13,5 +13,25 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        carDoctorTheme: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#FF3811",
+          secondary: "teal",
+
+          ".btn-primary": {
+            color: "#fff",
+          },
+
+          ".btn-outline.btn-primary:hover": {
+            color: "#fff",
+          },
+        },
+      },
+      "dark",
+    ],
+  },
 };
